@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c6ae5c76-fc48-4ce5-b3b6-5712b6b500c8": {
+      "ProjectGuid": "c6ae5c76-fc48-4ce5-b3b6-5712b6b500c8",
+      "DisplayName": "EShop.API",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "23e9edae-6d23-4347-a9df-7172ae7cc0a5": {
+      "ProjectGuid": "23e9edae-6d23-4347-a9df-7172ae7cc0a5",
+      "DisplayName": "EShop.Common",
+      "ColorIndex": 1
+    },
+    "ecf98fd7-c24a-4fcc-beb6-17be104d42e5": {
+      "ProjectGuid": "ecf98fd7-c24a-4fcc-beb6-17be104d42e5",
+      "DisplayName": "EShop.Services",
+      "ColorIndex": 2
+    },
+    "b4432731-7278-4332-9be6-e6467562ac03": {
+      "ProjectGuid": "b4432731-7278-4332-9be6-e6467562ac03",
+      "DisplayName": "EShop.Data",
+      "ColorIndex": 3
+    },
+    "be3e366e-b95f-4647-a542-b62a09bb8583": {
+      "ProjectGuid": "be3e366e-b95f-4647-a542-b62a09bb8583",
+      "DisplayName": "EShop.Infrastructure",
+      "ColorIndex": 4
+    },
+    "738e1824-64cd-4c21-b038-d0674dafa064": {
+      "ProjectGuid": "738e1824-64cd-4c21-b038-d0674dafa064",
+      "DisplayName": "EShop.Validation",
+      "ColorIndex": 5
+    },
+    "3fadbc92-42ef-4004-9e83-658e2de84676": {
+      "ProjectGuid": "3fadbc92-42ef-4004-9e83-658e2de84676",
+      "DisplayName": "EShop.Tests",
+      "ColorIndex": 6
+    },
+    "cd6e1332-a79c-4b39-b8b0-edd3fbaa60e5": {
+      "ProjectGuid": "cd6e1332-a79c-4b39-b8b0-edd3fbaa60e5",
+      "DisplayName": "EShop.API",
+      "ColorIndex": 7
+    },
+    "ef9c9e09-82c9-45f2-9e25-31e653836bd3": {
+      "ProjectGuid": "ef9c9e09-82c9-45f2-9e25-31e653836bd3",
+      "DisplayName": "EShop.Data",
+      "ColorIndex": 8
+    },
+    "5d15f0db-653a-4f8c-9043-2d9a96514c79": {
+      "ProjectGuid": "5d15f0db-653a-4f8c-9043-2d9a96514c79",
+      "DisplayName": "EShop.Validation",
+      "ColorIndex": 9
+    },
+    "0fb50f0d-7b22-4ecd-a8c0-9fe57457a6d4": {
+      "ProjectGuid": "0fb50f0d-7b22-4ecd-a8c0-9fe57457a6d4",
+      "DisplayName": "EShop.API",
+      "ColorIndex": 10
+    },
+    "9891cc95-977d-45be-a256-56fe9a03749c": {
+      "ProjectGuid": "9891cc95-977d-45be-a256-56fe9a03749c",
+      "DisplayName": "EShop.Common",
+      "ColorIndex": 11
+    },
+    "1045206f-03e3-441b-9817-8b1ac722c8c4": {
+      "ProjectGuid": "1045206f-03e3-441b-9817-8b1ac722c8c4",
+      "DisplayName": "EShop.Services",
+      "ColorIndex": 12
+    },
+    "ad3f4980-e9b7-43f3-bf70-fca87d5b83c0": {
+      "ProjectGuid": "ad3f4980-e9b7-43f3-bf70-fca87d5b83c0",
+      "DisplayName": "EShop.Infrastructure",
+      "ColorIndex": 13
+    }
+  },
+  "NextColorIndex": 14
+}

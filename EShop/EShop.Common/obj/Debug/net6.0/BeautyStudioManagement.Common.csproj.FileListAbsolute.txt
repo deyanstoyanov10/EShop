@@ -1,0 +1,12 @@
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\bin\Debug\net6.0\BeautyStudioManagement.Common.deps.json
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\bin\Debug\net6.0\BeautyStudioManagement.Common.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\bin\Debug\net6.0\ref\BeautyStudioManagement.Common.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\bin\Debug\net6.0\BeautyStudioManagement.Common.pdb
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.AssemblyInfoInputs.cache
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.AssemblyInfo.cs
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.csproj.CoreCompileInputs.cache
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\ref\BeautyStudioManagement.Common.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.pdb
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Common\obj\Debug\net6.0\BeautyStudioManagement.Common.csproj.AssemblyReference.cache

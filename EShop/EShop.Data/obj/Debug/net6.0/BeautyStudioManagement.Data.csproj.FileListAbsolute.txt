@@ -1,0 +1,17 @@
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.csproj.AssemblyReference.cache
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.AssemblyInfoInputs.cache
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.AssemblyInfo.cs
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.csproj.CoreCompileInputs.cache
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\BeautyStudioManagement.Data.deps.json
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\BeautyStudioManagement.Data.runtimeconfig.json
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\BeautyStudioManagement.Data.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\ref\BeautyStudioManagement.Data.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\BeautyStudioManagement.Data.pdb
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\BeautyStudioManagement.Common.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\bin\Debug\net6.0\BeautyStudioManagement.Common.pdb
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.csproj.CopyComplete
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\ref\BeautyStudioManagement.Data.dll
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.pdb
+D:\Visual Studio projects\BeautyStudioManagement\Server\BeautyStudioManagement\BeautyStudioManagement.Data\obj\Debug\net6.0\BeautyStudioManagement.Data.genruntimeconfig.cache

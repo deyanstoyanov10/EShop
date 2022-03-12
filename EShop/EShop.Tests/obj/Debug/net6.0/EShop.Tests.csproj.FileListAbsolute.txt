@@ -195,4 +195,3 @@ D:\Visual Studio projects\EShop\EShop\EShop.Tests\obj\Debug\net6.0\EShop.Tests.d
 D:\Visual Studio projects\EShop\EShop\EShop.Tests\obj\Debug\net6.0\ref\EShop.Tests.dll
 D:\Visual Studio projects\EShop\EShop\EShop.Tests\obj\Debug\net6.0\EShop.Tests.pdb
 D:\Visual Studio projects\EShop\EShop\EShop.Tests\obj\Debug\net6.0\EShop.Tests.genruntimeconfig.cache
-D:\Visual Studio projects\EShop\EShop\EShop.Tests\obj\Debug\net6.0\EShop.Tests.csproj.AssemblyReference.cache

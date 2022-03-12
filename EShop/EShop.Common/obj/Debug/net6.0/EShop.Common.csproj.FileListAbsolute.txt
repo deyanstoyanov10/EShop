@@ -20,4 +20,3 @@ D:\Visual Studio projects\EShop\EShop\EShop.Common\obj\Debug\net6.0\EShop.Common
 D:\Visual Studio projects\EShop\EShop\EShop.Common\obj\Debug\net6.0\EShop.Common.dll
 D:\Visual Studio projects\EShop\EShop\EShop.Common\obj\Debug\net6.0\ref\EShop.Common.dll
 D:\Visual Studio projects\EShop\EShop\EShop.Common\obj\Debug\net6.0\EShop.Common.pdb
-D:\Visual Studio projects\EShop\EShop\EShop.Common\obj\Debug\net6.0\EShop.Common.csproj.AssemblyReference.cache

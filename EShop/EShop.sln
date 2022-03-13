@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Validation", "EShop.V
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.API", "EShop.API\EShop.API.csproj", "{0FB50F0D-7B22-4ECD-A8C0-9FE57457A6D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Client", "EShop.Client\EShop.Client.csproj", "{2CF03D03-6B9F-4B91-BCEF-09A235AB2540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Client", "EShop.Client\EShop.Client.csproj", "{2CF03D03-6B9F-4B91-BCEF-09A235AB2540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

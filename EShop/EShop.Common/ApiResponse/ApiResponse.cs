@@ -21,9 +21,9 @@
             }
         }
 
-        public T Data { get; private set; }
+        public T Data { get; set; }
 
-        public IEnumerable<Error> Errors { get; private set; } = new List<Error>();
+        public IEnumerable<Error> Errors { get; set; } = new List<Error>();
 
         public bool Succeeded => !this.Errors.Any();
 

@@ -17,8 +17,8 @@
 
         public override async Task<Result> Execute(LoginUserInputModel model)
         {
-            var user = await _userManager.FindByNameAsync(model.username);
-            var passwordResult = await _userManager.CheckPasswordAsync(user, model.password);
+            var user = await _userManager.FindByNameAsync(model.Username);
+            var passwordResult = await _userManager.CheckPasswordAsync(user, model.Password);
 
             return passwordResult == false ? INVALID_CREDENTIALS_MESSAGE : true;
         }

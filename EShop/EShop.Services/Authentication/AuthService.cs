@@ -14,13 +14,16 @@
     public class AuthService : IAuthService
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         private readonly IJwtTokenProvider _jwtTokenProvider;
 
         public AuthService(
             UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager,
             IJwtTokenProvider jwtTokenProvider)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
             _jwtTokenProvider = jwtTokenProvider;
         }
 
@@ -38,7 +41,7 @@
 
         public async Task<Result<AppUserOutputModel>> Login(LoginUserInputModel loginInput)
         {
-            var appUser = await _userManager.FindByNameAsync(loginInput.username);
+            var appUser = await _userManager.FindByNameAsync(loginInput.Username);
 
             var handler = new LoginUsernameValidationHandler(_userManager);
             handler

@@ -17,7 +17,7 @@
 
         public override async Task<Result> Execute(LoginUserInputModel model)
         {
-            var user = await _userManager.FindByNameAsync(model.username);
+            var user = await _userManager.FindByNameAsync(model.Username);
 
             return user is null ? INVALID_CREDENTIALS_MESSAGE : await _next.Execute(model);
         }

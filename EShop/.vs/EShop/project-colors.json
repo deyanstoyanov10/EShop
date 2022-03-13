@@ -75,7 +75,12 @@
       "ProjectGuid": "ad3f4980-e9b7-43f3-bf70-fca87d5b83c0",
       "DisplayName": "EShop.Infrastructure",
       "ColorIndex": 13
+    },
+    "2cf03d03-6b9f-4b91-bcef-09a235ab2540": {
+      "ProjectGuid": "2cf03d03-6b9f-4b91-bcef-09a235ab2540",
+      "DisplayName": "EShop.Client",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 14
+  "NextColorIndex": 15
 }

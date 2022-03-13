@@ -8,6 +8,6 @@
 
         public Error(string message) => this.Description = message;
 
-        public string Description { get; private set; }
+        public string Description { get; set; }
     }
 }

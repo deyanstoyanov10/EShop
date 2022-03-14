@@ -80,7 +80,12 @@
       "ProjectGuid": "2cf03d03-6b9f-4b91-bcef-09a235ab2540",
       "DisplayName": "EShop.Client",
       "ColorIndex": 14
+    },
+    "919fd655-f067-4ba2-b932-d926e85dd6b4": {
+      "ProjectGuid": "919fd655-f067-4ba2-b932-d926e85dd6b4",
+      "DisplayName": "Script Documents",
+      "ColorIndex": 15
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 0
 }

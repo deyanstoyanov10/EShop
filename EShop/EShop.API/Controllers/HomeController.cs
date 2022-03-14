@@ -1,7 +1,7 @@
 ﻿namespace EShop.API.Controllers
 {
     using Common.Entities;
-
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : ApiController
@@ -18,6 +18,7 @@
             _logger = logger;
         }
 
+        [Authorize]
         [HttpGet(nameof(GetWeatherForecast))]
         public IEnumerable<WeatherForecast> GetWeatherForecast()
         {

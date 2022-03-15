@@ -14,16 +14,13 @@
     public class AuthService : IAuthService
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly SignInManager<AppUser> _signInManager;
         private readonly IJwtTokenProvider _jwtTokenProvider;
 
         public AuthService(
             UserManager<AppUser> userManager,
-            SignInManager<AppUser> signInManager,
             IJwtTokenProvider jwtTokenProvider)
         {
             _userManager = userManager;
-            _signInManager = signInManager;
             _jwtTokenProvider = jwtTokenProvider;
         }
 

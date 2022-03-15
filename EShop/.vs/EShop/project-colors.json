@@ -85,7 +85,12 @@
       "ProjectGuid": "919fd655-f067-4ba2-b932-d926e85dd6b4",
       "DisplayName": "Script Documents",
       "ColorIndex": 15
+    },
+    "f9e1ab78-f759-437a-95e8-b7ad81da9757": {
+      "ProjectGuid": "f9e1ab78-f759-437a-95e8-b7ad81da9757",
+      "DisplayName": "EShop.Tests",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }

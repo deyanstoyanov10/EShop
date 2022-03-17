@@ -1,10 +1,10 @@
 ﻿namespace EShop.API.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
+    using System.Web.Http;
 
     //[Authorize]
     [Route("api/[controller]")]
-    public class ApiController : ControllerBase
+    public class EShopController : ApiController
     {
     }
 }

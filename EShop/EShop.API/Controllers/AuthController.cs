@@ -4,11 +4,11 @@
     using Infrastructure.Extensions;
     using Services.Authentication.Contracts;
 
-    using Microsoft.AspNetCore.Mvc;
+    using System.Web.Http;
 
     using static EShop.Common.Authentication.AuthenticationRecords;
 
-    public class AuthController : ApiController
+    public class AuthController : EShopController
     {
         private readonly IAuthService _authService;
 

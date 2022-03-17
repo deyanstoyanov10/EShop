@@ -8,14 +8,14 @@
 
     public class AuthControllerRouteTests
     {
-        private readonly string LoginModelJson = "{\"username\": \"validUsername\",\"password\": \"validPassword\"}";
+        private readonly RegisterUserInputModel model = new RegisterUserInputModel("testFirstName", "testLastName", "testUsername", "testEmail", "testPassword");
 
-        //[Fact]
-        //public void PostLoginShouldBeMappedCorrectly()
-        //    => MyWebApi
-        //            .Routes()
-        //            .ShouldMap("api/Books/Get")
-        //            .WithHttpMethod(HttpMethod.Get)
-        //            .To<AuthController>(c => c.Get());
+        [Fact]
+        public void PostLoginShouldBeMappedCorrectly()
+            => MyWebApi
+                    .Routes()
+                    .ShouldMap("api/Auth/Register")
+                    .WithHttpMethod(HttpMethod.Post)
+                    .To<AuthController>(c => c.Register(model));
     }
 }

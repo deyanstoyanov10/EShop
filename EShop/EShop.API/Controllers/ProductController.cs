@@ -9,7 +9,7 @@
     using static Common.Models.Product.ProductRecords;
     using static Common.Models.Search.SearchRecords;
 
-    public class ProductController : ApiController
+    public class ProductController : EShopController
     {
         private readonly IProductService _productService;
 

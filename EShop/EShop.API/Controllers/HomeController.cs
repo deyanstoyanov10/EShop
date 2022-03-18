@@ -4,7 +4,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
-    public class HomeController : EShopController
+    public class HomeController : ApiController
     {
         private static readonly string[] Summaries = new[]
         {

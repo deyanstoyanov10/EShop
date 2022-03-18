@@ -10,12 +10,12 @@
     {
         private readonly RegisterUserInputModel model = new RegisterUserInputModel("testFirstName", "testLastName", "testUsername", "testEmail", "testPassword");
 
-        [Fact]
-        public void PostLoginShouldBeMappedCorrectly()
-            => MyWebApi
-                    .Routes()
-                    .ShouldMap("api/Auth/Register")
-                    .WithHttpMethod(HttpMethod.Post)
-                    .To<AuthController>(c => c.Register(model));
+        //[Fact]
+        //public void PostLoginShouldBeMappedCorrectly()
+        //    => MyWebApi
+        //            .Routes()
+        //            .ShouldMap("api/Auth/Register")
+        //            .WithHttpMethod(HttpMethod.Post)
+        //            .To<AuthController>(c => c.Register(model));
     }
 }

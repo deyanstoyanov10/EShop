@@ -4,17 +4,16 @@
     using Infrastructure.Extensions;
     using Services.Authentication.Contracts;
 
-    using System.Web.Http;
+    using Microsoft.AspNetCore.Mvc;
 
     using static EShop.Common.Authentication.AuthenticationRecords;
 
-    public class AuthController : EShopController
+    public class AuthController : ApiController
     {
         private readonly IAuthService _authService;
 
         public AuthController(IAuthService authService) => _authService = authService;
 
-        [HttpPost]
         [Route(nameof(Register))]
         public async Task<ApiResponse<AppUserOutputModel>> Register([FromBody] RegisterUserInputModel registerInput)
         {

@@ -14,6 +14,7 @@
 
         public AuthController(IAuthService authService) => _authService = authService;
 
+        [HttpPost]
         [Route(nameof(Register))]
         public async Task<ApiResponse<AppUserOutputModel>> Register([FromBody] RegisterUserInputModel registerInput)
         {

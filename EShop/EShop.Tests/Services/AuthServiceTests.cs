@@ -24,11 +24,11 @@
             var store = new Mock<IUserStore<AppUser>>();
             _loginUserManager = new MockedLoginUserManager(store.Object, null, null, null, null, null, null, null, null);
             _registrationUserManager = new MockedRegistrationUserManager(store.Object, null, null, null, null, null, null, null, null);
-            _jwtTokenProvider = ObjectFactory.GetMockedJwtTokenProvider();
+            _jwtTokenProvider = GetMockedJwtTokenProvider();
         }
 
         [Fact]
-        public async Task RegistrationShouldReturnSuccess()
+        public async Task Registration_ReturnsSuccess_WithValidCredentialsInput()
         {
             var input = new RegisterUserInputModel("First", "Last", MockedRegistrationUserManager.ValidRegistrationUsername, MockedRegistrationUserManager.ValidRegistrationEmail, MockedRegistrationUserManager.ValidRegistrationPassword);
             var authService = new AuthService(_registrationUserManager, _jwtTokenProvider);
@@ -48,7 +48,7 @@
         [InlineData("Test", "", MockedRegistrationUserManager.ValidRegistrationPassword)]
         [InlineData(MockedRegistrationUserManager.ValidRegistrationUsername, MockedRegistrationUserManager.ValidRegistrationEmail, "")]
         [InlineData("Test", MockedRegistrationUserManager.ValidRegistrationEmail, MockedRegistrationUserManager.ValidRegistrationPassword)]
-        public async Task RegistrationShouldReturnErrorResultWithNotValidCredentials(string username, string email, string password)
+        public async Task Registration_ReturnsError_WithNotValidCredentials(string username, string email, string password)
         {
             var input = new RegisterUserInputModel("First", "Last", username, email, password);
             var authService = new AuthService(_registrationUserManager, _jwtTokenProvider);
@@ -59,7 +59,7 @@
         }
 
         [Fact]
-        public async Task LoginShouldReturnSuccess()
+        public async Task Login_ReturnsSuccess_WithValidCredentialsInput()
         {
             var input = new LoginUserInputModel(MockedLoginUserManager.ValidLoginUsername, MockedLoginUserManager.ValidLoginPassword);
             var authService = new AuthService(_loginUserManager, _jwtTokenProvider);
@@ -76,7 +76,7 @@
         [InlineData("Test", "Test")]
         [InlineData(MockedLoginUserManager.ValidLoginUsername, "Test")]
         [InlineData("Test", MockedLoginUserManager.ValidLoginPassword)]
-        public async Task LoginShouldReturnShouldReturnErrorResultWithNotValidCredentials(string username, string password)
+        public async Task Login_ReturnsError_WithNotValidCredentials(string username, string password)
         {
             var input = new LoginUserInputModel(username, password);
             var authService = new AuthService(_loginUserManager, _jwtTokenProvider);

@@ -5,23 +5,23 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-    internal class FilterConfiguration : IEntityTypeConfiguration<Filter>
+    internal class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {
-        public void Configure(EntityTypeBuilder<Filter> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder
                 .HasKey(k => k.Id);
 
             builder
-                .HasOne(c => c.Category)
-                .WithMany(f => f.Filters)
+                .HasMany(f => f.Filters)
+                .WithOne(c => c.Category)
                 .HasForeignKey(c => c.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
-                .HasMany(o => o.Options)
-                .WithOne(f => f.Filter)
-                .HasForeignKey(f => f.FilterId)
+                .HasMany(p => p.Products)
+                .WithOne(c => c.Category)
+                .HasForeignKey(c => c.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

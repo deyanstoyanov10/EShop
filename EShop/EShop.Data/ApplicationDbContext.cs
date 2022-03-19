@@ -11,6 +11,8 @@
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) {}
 
+        public DbSet<Category> Categories { get; set; }
+
         public DbSet<Filter> Filters { get; set; }
 
         public DbSet<Product> Products { get; set; }
@@ -21,6 +23,7 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.ApplyConfiguration(new CategoryConfiguration());
             builder.ApplyConfiguration(new FilterConfiguration());
             builder.ApplyConfiguration(new ProductConfiguration());
             builder.ApplyConfiguration(new OptionConfiguration());

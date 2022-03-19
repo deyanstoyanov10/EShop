@@ -13,6 +13,12 @@
                 .HasKey(k => k.Id);
 
             builder
+                .HasOne(c => c.Category)
+                .WithMany(p => p.Products)
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder
                 .HasMany(po => po.ProductOptions)
                 .WithOne(p => p.Product)
                 .HasForeignKey(p => p.ProductId)

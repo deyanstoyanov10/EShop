@@ -12,7 +12,11 @@
 
         public string Label { get; set; }
 
-        public bool Status { get; set; }
+        public string Description { get; set; }
+
+        public double Price { get; set; }
+
+        public bool Active { get; set; }
 
         public DateTime Added { get; set; }
 

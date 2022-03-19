@@ -15,8 +15,16 @@
                 return;
             }
 
-            var filter1 = new Filter() { Label = "TestFilter1" };
-            var filter2 = new Filter() { Label = "TestFilter2" };
+            var category1 = new Category() { Name = "Category1" };
+            var category2 = new Category() { Name = "Category2" };
+            var category3 = new Category() { Name = "Category3" };
+            var category4 = new Category() { Name = "Category4" };
+
+            _data.Categories.AddRange(category1, category2, category3, category4);
+            _data.SaveChanges();
+
+            var filter1 = new Filter() { Label = "TestFilter1", Category = category1 };
+            var filter2 = new Filter() { Label = "TestFilter2", Category = category1 };
 
             _data.Filters.AddRange(filter1, filter2);
             _data.SaveChanges();
@@ -36,9 +44,9 @@
             _data.Options.AddRange(f2option1, f2option2, f2option3, f2option4);
             _data.SaveChanges();
 
-            var product1 = new Product() { Label = "TestProduct1", Added = DateTime.UtcNow, Status = true};
-            var product2 = new Product() { Label = "TestProduct2", Added = DateTime.UtcNow, Status = true};
-            var product3 = new Product() { Label = "TestProduct3", Added = DateTime.UtcNow, Status = true};
+            var product1 = new Product() { Label = "TestProduct1", Added = DateTime.UtcNow, Status = true, Category = category1 };
+            var product2 = new Product() { Label = "TestProduct2", Added = DateTime.UtcNow, Status = true, Category = category1 };
+            var product3 = new Product() { Label = "TestProduct3", Added = DateTime.UtcNow, Status = true, Category = category1 };
 
             _data.Products.AddRange(product1, product2, product3);
             _data.SaveChanges();

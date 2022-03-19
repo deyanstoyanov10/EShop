@@ -19,6 +19,12 @@
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
+                .HasMany(p => p.Pictures)
+                .WithOne(p => p.Product)
+                .HasForeignKey(p => p.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder
                 .HasMany(po => po.ProductOptions)
                 .WithOne(p => p.Product)
                 .HasForeignKey(p => p.ProductId)

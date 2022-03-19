@@ -17,6 +17,8 @@
 
         public DbSet<Product> Products { get; set; }
 
+        public DbSet<Picture> Pictures { get; set; }
+
         public DbSet<Option> Options { get; set; }
 
         public DbSet<ProductOption> ProductOptions { get; set; }
@@ -26,6 +28,7 @@
             builder.ApplyConfiguration(new CategoryConfiguration());
             builder.ApplyConfiguration(new FilterConfiguration());
             builder.ApplyConfiguration(new ProductConfiguration());
+            builder.ApplyConfiguration(new PictureConfiguration());
             builder.ApplyConfiguration(new OptionConfiguration());
             builder.ApplyConfiguration(new ProductOptionConfiguration());
 

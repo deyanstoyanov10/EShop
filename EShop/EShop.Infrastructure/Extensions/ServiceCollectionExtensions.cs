@@ -11,6 +11,9 @@
     using Services.Product;
     using Services.Product.Contracts;
 
+    using EShop.Services.Category;
+    using EShop.Services.Category.Contracts;
+
     using Services.Providers;
     using Services.Providers.Contracts;
 
@@ -22,7 +25,7 @@
     using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     using System.Text;
-
+    
     public static class ServiceCollectionExtensions
     {
         public static AppSettings GetApplicationSettings(
@@ -87,7 +90,8 @@
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
             => services
                     .AddTransient<IAuthService, AuthService>()
-                    .AddTransient<IProductService, ProductService>();
+                    .AddTransient<IProductService, ProductService>()
+                    .AddTransient<ICategoryService, CategoryService>();
 
         public static IServiceCollection AddApplicationProviders(this IServiceCollection services)
             => services

@@ -5,7 +5,7 @@
     public class Seeder
     {
         private readonly ApplicationDbContext _data;
-        private bool flag = false;
+        private bool flag = true;
         public Seeder(ApplicationDbContext data) => _data = data;
 
         public void Seed()

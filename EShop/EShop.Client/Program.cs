@@ -1,7 +1,8 @@
 using EShop.Client;
 using EShop.Client.Services.Authentication;
 using EShop.Client.Services.Authentication.Contracts;
-
+using EShop.Client.Services.Category;
+using EShop.Client.Services.Category.Contracts;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -18,5 +19,6 @@ builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 await builder.Build().RunAsync();

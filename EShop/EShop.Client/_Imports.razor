@@ -11,7 +11,10 @@
 @using Microsoft.JSInterop
 @using EShop.Client
 @using EShop.Client.Shared
+@using static EShop.Common.Models.Category.CategoryRecords;
 @using static EShop.Common.Authentication.AuthenticationRecords
 @using Client.Services.Authentication.Contracts
+@using Client.Services.Category.Contracts
 @using Common;
 @inject IAuthService AuthService
+@inject ICategoryService CategoryService

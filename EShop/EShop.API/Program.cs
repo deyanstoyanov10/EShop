@@ -1,3 +1,4 @@
+using EShop.API.Hubs;
 using EShop.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 var settings = builder.Services.GetApplicationSettings(builder.Configuration);
 
 builder
+    .Services
+    .AddSignalR()
     .Services
     .AddDatabase(builder.Configuration)
     .AddIdentity()
@@ -30,5 +33,7 @@ app
     .ApplyMigrations();
 
 app.MapControllers();
+
+app.MapHub<ProductsHub>("/productshub");
 
 app.Run();

@@ -14,6 +14,9 @@
     using EShop.Services.Category;
     using EShop.Services.Category.Contracts;
 
+    using EShop.Services.Filter;
+    using EShop.Services.Filter.Contracts;
+
     using Services.Providers;
     using Services.Providers.Contracts;
 
@@ -91,7 +94,8 @@
             => services
                     .AddTransient<IAuthService, AuthService>()
                     .AddTransient<IProductService, ProductService>()
-                    .AddTransient<ICategoryService, CategoryService>();
+                    .AddTransient<ICategoryService, CategoryService>()
+                    .AddTransient<IFilterService, FilterService>();
 
         public static IServiceCollection AddApplicationProviders(this IServiceCollection services)
             => services

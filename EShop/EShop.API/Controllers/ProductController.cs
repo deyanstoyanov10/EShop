@@ -6,8 +6,8 @@
 
     using Microsoft.AspNetCore.Mvc;
 
-    using static Common.Models.Product.ProductRecords;
     using static Common.Models.Search.SearchRecords;
+    using static Common.Models.Product.ProductRecords;
 
     public class ProductController : ApiController
     {
@@ -17,9 +17,9 @@
 
         [HttpGet]
         [Route(nameof(GetProducts))]
-        public async Task<ApiResponse<IEnumerable<ProductOutputModel>>> GetProducts([FromBody] SearchInputModel search)
+        public async Task<ApiResponse<IEnumerable<ProductOutputModel>>> GetProducts([FromBody] SearchModel search)
         {
-            var result = await _productService.GetProducts(search);
+            var result = await _productService.GetProducts(1, search);
 
             if (result.Failure)
             {

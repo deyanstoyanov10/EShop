@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y8rfIc4s2jUmqJ75QDQHyFQbV+tU3V/mgKlDmjDoRZE=",
+  "Hash": "Ywbrc938pjB6+mTa8fUuP12FFfD9ENyZM7IbaWGWmI8=",
   "Source": "EShop.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -391,6 +391,23 @@
       "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Connections.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -425,6 +442,40 @@
       "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.2\\lib\\net6.0\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Client.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Client.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.Http.Connections.Client.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Common.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Common.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.Http.Connections.Common.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -457,6 +508,74 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.Core.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.SignalR.Client.Core.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.SignalR.Client.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Common.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Common.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.SignalR.Common.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\6.0.3\\lib\\net6.0\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
@@ -680,6 +799,23 @@
       "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Features.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.extensions.features\\6.0.3\\lib\\net6.0\\Microsoft.Extensions.Features.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.dll",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -779,7 +915,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll",
@@ -1816,7 +1952,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\system.io.pipelines\\6.0.1\\lib\\net6.0\\System.IO.Pipelines.dll"
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\system.io.pipelines\\6.0.2\\lib\\net6.0\\System.IO.Pipelines.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll",
@@ -3893,21 +4029,21 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.dll"
     },
     {
-      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\26XAHBEs.gz",
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\24AMe2jW.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Common.dll.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Common.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Common.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\2H4J51uc.gz",
@@ -4199,6 +4335,23 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\6KtiCTZE.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Connections.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\6PZhQUO8.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -4350,6 +4503,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.wasm"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\9p+1+Xxe.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\9S86I5+1.gz",
@@ -4947,23 +5117,6 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XDocument.dll"
     },
     {
-      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\FAHlsLzZ.gz",
-      "SourceId": "EShop.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
-    },
-    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\fbJPexU+.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -5525,6 +5678,23 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Principal.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\JTNOhgHm.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Client.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Client.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Client.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\jUxxmXca.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -6069,6 +6239,23 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Collections.Specialized.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\OIguNSDt.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.Core.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\OMAiJhGJ.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -6596,6 +6783,40 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Resources.ResourceManager.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\tguVr0lN.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Common.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Common.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Common.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\Ttk+Zmwl.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\tW+XyxiR.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -6851,6 +7072,23 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\VEH3vV1T.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Protocols.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\Vjkm+YMq.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -6866,6 +7104,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XmlDocument.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\vOHGekRE.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Features.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\vuMQ+C5s.gz",
@@ -7291,6 +7546,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Resources.Writer.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\zO+PskzA.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\ZV0LPBy2.gz",

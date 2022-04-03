@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Visual Studio projects/EShop/EShop/EShop.Client/Shared/Filters.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZpbHRlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/EShop/EShop/EShop.Client/Shared/Footer.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,8 +58,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Visual Studio projects/EShop/EShop/EShop.Client/Shared/Loader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/EShop/EShop/EShop.Client/Shared/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/EShop/EShop/EShop.Client/Shared/ProductsList.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFByb2R1Y3RzTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/EShop/EShop/EShop.Client/Shared/RedirectToLogin.razor]

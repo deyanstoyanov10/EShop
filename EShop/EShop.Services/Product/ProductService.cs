@@ -20,34 +20,45 @@
 
         public ProductService(ApplicationDbContext data) => _data = data;
 
-        public async Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(SearchInputModel search)
+        public async Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(int categoryId, SearchModel search)
         {
             var predicate = BuildPredicate(search);
 
             var products = await _data
                                     .Products
+                                    .Include(pic => pic.Pictures)
                                     .Include(po => po.ProductOptions)
+                                    .Where(c => c.CategoryId == categoryId)
                                     .Where(predicate)
-                                    .Select(p => new ProductOutputModel(p.Id, p.Label))
+                                    .Select(p => new ProductOutputModel()
+                                    {
+                                        ProductId = p.Id,
+                                        Label = p.Label,
+                                        Price = p.Price,
+                                        Picture = p.Pictures
+                                                        .OrderBy(x => x.Position)
+                                                        .Select(x => x.FilePath)
+                                                        .FirstOrDefault()
+                                    })
                                     .ToListAsync();
 
             return products;
         }
 
-        private Expression<Func<Product, bool>> BuildPredicate(SearchInputModel search)
+        private Expression<Func<Product, bool>> BuildPredicate(SearchModel search)
         {
             var predicate = PredicateBuilder.True<Product>();
 
-            foreach (var filter in search.filters)
+            foreach (var filter in search.Filters)
             {
                 var filterPredicate = PredicateBuilder.False<Product>();
                 int activeCount = 0;
 
-                foreach (var option in filter.options)
+                foreach (var option in filter.Options)
                 {
-                    if (option.active)
+                    if (option.Active)
                     {
-                        filterPredicate = filterPredicate.Or(p => p.ProductOptions.Any(o => o.OptionId == option.optionId));
+                        filterPredicate = filterPredicate.Or(p => p.ProductOptions.Any(o => o.OptionId == option.OptionId));
                         ++activeCount;
                     }
                 }

@@ -2,6 +2,25 @@
 {
     public class ProductRecords
     {
-        public record ProductOutputModel(int productId, string label);
+        //public record ProductOutputModel(int productId, string label);
+
+        public class ProductOutputModel
+        {
+            public int ProductId { get; set; }
+
+            public string Label { get; set; }
+
+            public double Price { get; set; }
+
+            public string Amount
+            {
+                get
+                {
+                    return string.Format("{0:C}", this.Price);
+                }
+            }
+
+            public string? Picture { get; set; }
+        }
     }
 }

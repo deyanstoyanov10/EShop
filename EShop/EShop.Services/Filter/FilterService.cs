@@ -8,6 +8,7 @@
 
     using static EShop.Common.Models.Filter.FilterRecords;
     using static EShop.Common.Models.Option.OptionRecords;
+    using static EShop.Common.Models.Search.SearchRecords;
 
     public class FilterService : IFilterService
     {
@@ -15,7 +16,23 @@
 
         public FilterService(ApplicationDbContext data) => _data = data;
 
-        public async Task<Result<IEnumerable<FilterModel>>> GetFiltersByCategoryId(int categoryId)
+        public async Task<Result<SearchModel>> GetSearchModel(int categoryId)
+        {
+            var searchModel = new SearchModel();
+
+            var filters = await this.GetFiltersByCategoryId(categoryId);
+
+            if (filters.Failure)
+            {
+                return searchModel;
+            }
+
+            searchModel.Filters = filters.Data;
+
+            return searchModel;
+        }
+
+        private async Task<Result<IEnumerable<FilterModel>>> GetFiltersByCategoryId(int categoryId)
         {
             var filters = await _data
                                     .Filters

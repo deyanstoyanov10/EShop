@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.SignalR.Client
+
+<div class="row">
+    @foreach (var product in this.productList)
+    {
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    <img src="@product.Picture">
+                </div>
+                <figcaption class="info-wrap border-top">
+                    <div class="price-wrap">
+                        <strong class="price">@product.Amount</strong>
+                    </div>
+                    <p class="title mb-2">@product.Label</p>
+
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
+                </figcaption>
+            </figure>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int CategoryId { get; set; }
+
+    private List<ProductOutputModel> productList = new List<ProductOutputModel>();
+
+    private HubConnection? hubConnection;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl("https://localhost:7030/productshub")
+            .Build();
+
+        hubConnection.On<SocketResponse<IEnumerable<ProductOutputModel>>>("ReceiveProducts", (response) =>
+        {
+            Console.WriteLine("Test");
+            Console.WriteLine(response.Data.ToList().Count);
+            
+            this.productList = response.Data.ToList();
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+    }
+}

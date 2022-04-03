@@ -1,0 +1,82 @@
+﻿@using Microsoft.AspNetCore.SignalR.Client
+
+<div id="aside_filter" class="collapse card d-lg-block mb-5">
+    @if (searchModel.Filters == null)
+    {
+        <Loader />
+    }
+    else
+    {
+        @foreach (var filter in searchModel.Filters)
+        {
+            <article class="filter-group">
+                <header class="card-header">
+                    <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_brands">
+                        <i class="icon-control fa fa-chevron-down"></i> @filter.Label
+                    </a>
+                </header>
+                <div class="collapse show" id="collapse_aside_brands">
+                    <div class="card-body">
+
+                        @foreach (var option in filter.Options)
+                        {
+                            <label class="form-check mb-2">
+                                @if (option.Active)
+                                {
+                                    <input type="checkbox" class="form-check-input" @bind-value=@option.Active checked="checked" @onclick="@(async () => await UpdateProducts())" />
+                                }
+                                else
+                                {
+                                    <input type="checkbox" class="form-check-input" @bind-value=@option.Active @onclick="@(async () => await UpdateProducts())" />
+                                }
+                                <span class="form-check-label">@option.Name</span>
+                            </label>
+                        }
+                    </div>
+                </div>
+            </article>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int CategoryId { get; set; }
+
+    private SearchModel searchModel = new SearchModel();
+    private HubConnection? hubConnection;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl("https://localhost:7030/productshub")
+            .Build();
+
+        hubConnection.On<SocketResponse<SearchModel>>("TakeFilters", (response) =>
+        {
+            this.searchModel = response.Data;
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+
+        await GetFilters();
+        //await UpdateProducts();
+    }
+
+    private async Task GetFilters()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.SendAsync("GetFilters", this.CategoryId);
+        }
+    }
+
+    private async Task UpdateProducts()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.SendAsync("GetProducts", this.CategoryId, this.searchModel);
+        }
+    }
+}

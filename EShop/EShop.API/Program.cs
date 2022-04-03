@@ -9,6 +9,7 @@ builder
     .Services
     .AddSignalR()
     .Services
+    .AddMemoryCache()
     .AddDatabase(builder.Configuration)
     .AddIdentity()
     .AddJwtAuthentication(settings)

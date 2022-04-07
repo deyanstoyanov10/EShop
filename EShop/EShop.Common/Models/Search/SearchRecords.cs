@@ -8,7 +8,9 @@
 
         public class SearchModel
         {
-            public SearchModel() {}
+            public SearchModel() => this.Filters = new List<FilterModel>();
+
+            public int CategoryId { get; set; }
 
             public IEnumerable<FilterModel> Filters { get; set; }
         }

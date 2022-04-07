@@ -2,5 +2,8 @@
 {
     internal interface IHubService
     {
+        Task GetFilters(int categoryId);
+
+        Task UpdateProducts(int categoryId);
     }
 }

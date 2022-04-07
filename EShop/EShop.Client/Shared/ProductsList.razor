@@ -1,50 +1,65 @@
 ﻿@using Microsoft.AspNetCore.SignalR.Client
 
 <div class="row">
-    @foreach (var product in this.productList)
+    @if (!this.Loaded)
     {
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <figure class="card card-product-grid">
-                <div class="img-wrap">
-                    <img src="@product.Picture">
-                </div>
-                <figcaption class="info-wrap border-top">
-                    <div class="price-wrap">
-                        <strong class="price">@product.Amount</strong>
-                    </div>
-                    <p class="title mb-2">@product.Label</p>
-
-                    <a href="#" class="btn btn-primary">Add to cart</a>
-                    <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                </figcaption>
-            </figure>
-        </div>
+        <Loader />
     }
+    else if(productList == null || productList.Count == 0)
+    {
+        <p role="alert">No resource found!</p>
+    }
+    else
+    {
+        @foreach (var product in this.productList)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <figure class="card card-product-grid">
+                    <div class="img-wrap">
+                        <img src="@product.Picture">
+                    </div>
+                    <figcaption class="info-wrap border-top">
+                        <div class="price-wrap">
+                            <strong class="price">@product.Amount</strong>
+                        </div>
+                        <p class="title mb-2">@product.Label</p>
+
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
+                    </figcaption>
+                </figure>
+            </div>
+        }
+    }
+
 </div>
 
 @code {
-    [Parameter]
-    public int CategoryId { get; set; }
-
     private List<ProductOutputModel> productList = new List<ProductOutputModel>();
 
-    private HubConnection? hubConnection;
+    bool Loaded = false;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        hubConnection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7030/productshub")
-            .Build();
+        Bus.Subscribe<SocketResponse<IEnumerable<ProductOutputModel>>>(ReceiveProducts);
+    }
 
-        hubConnection.On<SocketResponse<IEnumerable<ProductOutputModel>>>("ReceiveProducts", (response) =>
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if(!this.Loaded)
         {
-            Console.WriteLine("Test");
-            Console.WriteLine(response.Data.ToList().Count);
-            
-            this.productList = response.Data.ToList();
-            StateHasChanged();
-        });
+            Bus.Subscribe<SocketResponse<IEnumerable<ProductOutputModel>>>(ReceiveProducts);
+        }
+    }
 
-        await hubConnection.StartAsync();
+    private void ReceiveProducts(MessageArgs args)
+    {
+        var message = args.GetMessage<SocketResponse<IEnumerable<ProductOutputModel>>>();
+
+        this.productList = message.Data.ToList();
+
+        this.Loaded = true;
+
+        StateHasChanged();
     }
 }

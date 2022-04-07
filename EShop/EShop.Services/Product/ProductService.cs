@@ -20,7 +20,7 @@
 
         public ProductService(ApplicationDbContext data) => _data = data;
 
-        public async Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(int categoryId, SearchModel search)
+        public async Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(SearchModel search)
         {
             var predicate = BuildPredicate(search);
 
@@ -28,7 +28,7 @@
                                     .Products
                                     .Include(pic => pic.Pictures)
                                     .Include(po => po.ProductOptions)
-                                    .Where(c => c.CategoryId == categoryId)
+                                    .Where(c => c.CategoryId == search.CategoryId)
                                     .Where(predicate)
                                     .Select(p => new ProductOutputModel()
                                     {

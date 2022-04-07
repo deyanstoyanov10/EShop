@@ -27,6 +27,7 @@
                 return searchModel;
             }
 
+            searchModel.CategoryId = categoryId;
             searchModel.Filters = filters.Data;
 
             return searchModel;

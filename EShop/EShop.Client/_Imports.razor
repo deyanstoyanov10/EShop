@@ -18,6 +18,12 @@
 @using EShop.Common.SocketResponse;
 @using Client.Services.Authentication.Contracts
 @using Client.Services.Category.Contracts
+@using Client.Services.Hub.Contracts
 @using Common;
+@using BlazorComponentBus;
+
+@inject Blazored.SessionStorage.ISessionStorageService SessionStorage
+@inject NavigationManager NavigationManager
 @inject IAuthService AuthService
 @inject ICategoryService CategoryService
+@inject ComponentBus Bus

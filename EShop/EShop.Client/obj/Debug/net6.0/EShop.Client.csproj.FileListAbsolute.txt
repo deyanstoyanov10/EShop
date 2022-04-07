@@ -905,3 +905,11 @@ D:\Visual Studio projects\EShop\EShop\EShop.Client\obj\Debug\net6.0\build-gz\VEH
 D:\Visual Studio projects\EShop\EShop\EShop.Client\obj\Debug\net6.0\build-gz\vOHGekRE.gz
 D:\Visual Studio projects\EShop\EShop\EShop.Client\obj\Debug\net6.0\build-gz\Ttk+Zmwl.gz
 D:\Visual Studio projects\EShop\EShop\EShop.Client\obj\Debug\net6.0\build-gz\9p+1+Xxe.gz
+D:\Visual Studio projects\EShop\EShop\EShop.Client\bin\Debug\net6.0\wwwroot\_framework\BlazorComponentBus.dll
+D:\Visual Studio projects\EShop\EShop\EShop.Client\bin\Debug\net6.0\wwwroot\_framework\BlazorComponentBus.dll.gz
+D:\Visual Studio projects\EShop\EShop\EShop.Client\bin\Debug\net6.0\BlazorComponentBus.dll
+D:\Visual Studio projects\EShop\EShop\EShop.Client\obj\Debug\net6.0\build-gz\dgsLZKCt.gz
+D:\Visual Studio projects\EShop\EShop\EShop.Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.SessionStorage.dll
+D:\Visual Studio projects\EShop\EShop\EShop.Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.SessionStorage.dll.gz
+D:\Visual Studio projects\EShop\EShop\EShop.Client\bin\Debug\net6.0\Blazored.SessionStorage.dll
+D:\Visual Studio projects\EShop\EShop\EShop.Client\obj\Debug\net6.0\build-gz\PV9O+Y3g.gz

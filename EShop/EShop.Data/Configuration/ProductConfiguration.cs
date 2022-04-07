@@ -29,6 +29,12 @@
                 .WithOne(p => p.Product)
                 .HasForeignKey(p => p.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder
+                .HasMany(sci => sci.ShoppingCartItems)
+                .WithOne(p => p.Product)
+                .HasForeignKey(p => p.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

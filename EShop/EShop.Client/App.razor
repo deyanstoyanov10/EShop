@@ -1,4 +1,6 @@
-﻿<CascadingAuthenticationState>
+﻿@using Microsoft.AspNetCore.SignalR.Client
+
+<CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
@@ -23,3 +25,66 @@
         </NotFound>
     </Router>
 </CascadingAuthenticationState>
+
+
+@code {
+    private HubConnection? hubConnection;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl("https://localhost:7030/productshub")
+            .Build();
+
+        hubConnection.On<SocketResponse<SearchModel>>("ReceiveFilters", (response) =>
+        {
+            Bus.Publish<SocketResponse<SearchModel>>(response);
+        });
+
+        hubConnection.On<SocketResponse<IEnumerable<ProductOutputModel>>>("ReceiveProducts", (response) =>
+        {
+            Bus.Publish<SocketResponse<IEnumerable<ProductOutputModel>>>(response);
+        });
+
+        await hubConnection.StartAsync();
+
+        Bus.Subscribe<GetFiltersByCategoryMessage>(GetFilters);
+        Bus.Subscribe<SearchModel>(UpdateProducts);
+    }
+
+    private void GetFilters(MessageArgs args)
+    {
+        var message = args.GetMessage<GetFiltersByCategoryMessage>();
+
+        int categoryId = message.CategoryId;
+
+        if (hubConnection is not null)
+        {
+            try
+            {
+                Task.WaitAll(hubConnection.SendAsync("GetFilters", categoryId));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+
+    private void UpdateProducts(MessageArgs args)
+    {
+        var message = args.GetMessage<SearchModel>();
+
+        if (hubConnection is not null)
+        {
+            try
+            {
+                Task.WaitAll(hubConnection.SendAsync("GetProducts", message));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}

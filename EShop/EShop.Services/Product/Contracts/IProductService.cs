@@ -7,6 +7,6 @@
 
     public interface IProductService
     {
-        Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(int categoryId, SearchModel search);
+        Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(SearchModel search);
     }
 }

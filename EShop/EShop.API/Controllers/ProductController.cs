@@ -19,7 +19,7 @@
         [Route(nameof(GetProducts))]
         public async Task<ApiResponse<IEnumerable<ProductOutputModel>>> GetProducts([FromBody] SearchModel search)
         {
-            var result = await _productService.GetProducts(1, search);
+            var result = await _productService.GetProducts(search);
 
             if (result.Failure)
             {

@@ -4,6 +4,7 @@
     using Common.Entities;
     using Providers.Contracts;
     using Authentication.Contracts;
+    using Services.ShoppingCart.Contracts;
     using Validation.Authentication.LoginValidation;
     using Validation.Authentication.RegistrationValidation;
 
@@ -15,13 +16,16 @@
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IJwtTokenProvider _jwtTokenProvider;
+        private readonly ICartService _cartService;
 
         public AuthService(
             UserManager<AppUser> userManager,
-            IJwtTokenProvider jwtTokenProvider)
+            IJwtTokenProvider jwtTokenProvider,
+            ICartService cartService)
         {
             _userManager = userManager;
             _jwtTokenProvider = jwtTokenProvider;
+            _cartService = cartService;
         }
 
         public async Task<Result<AppUser>> Register(RegisterUserInputModel registerInput)
@@ -32,6 +36,13 @@
                 .SetNext(new CreateUserValidationHandler(_userManager));
 
             var result = await handler.Execute(registerInput);
+
+            if (result.Failure)
+            {
+                return result;
+            }
+
+            await _cartService.CreateShoppingCart(result.Data);
 
             return result;
         }

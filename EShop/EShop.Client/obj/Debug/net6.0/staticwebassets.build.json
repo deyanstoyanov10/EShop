@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ywbrc938pjB6+mTa8fUuP12FFfD9ENyZM7IbaWGWmI8=",
+  "Hash": "XMWGDqsGj+8U9ZmFgBTEoXJ2sGydq9VUDfP9HV2XHKE=",
   "Source": "EShop.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.1\\build\\net6.0\\blazor.webassembly.js"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorComponentBus.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorComponentBus.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\blazorcomponentbus\\2.0.0\\lib\\net6.0\\BlazorComponentBus.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.SessionStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\didko\\.nuget\\packages\\blazored.sessionstorage\\2.2.0\\lib\\net5.0\\Blazored.SessionStorage.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.1.ynjylm5yl3.js",
@@ -4930,6 +4964,23 @@
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Compression.FileSystem.dll"
     },
     {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\dgsLZKCt.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorComponentBus.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorComponentBus.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorComponentBus.dll"
+    },
+    {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\DH+NnlqU.gz",
       "SourceId": "EShop.Client",
       "SourceType": "Computed",
@@ -6407,6 +6458,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.dll"
+    },
+    {
+      "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\PV9O+Y3g.gz",
+      "SourceId": "EShop.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.SessionStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll"
     },
     {
       "Identity": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\obj\\Debug\\net6.0\\build-gz\\PX4H95DO.gz",

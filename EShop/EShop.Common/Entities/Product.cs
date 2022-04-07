@@ -6,6 +6,7 @@
         {
             this.Pictures = new HashSet<Picture>();
             this.ProductOptions = new HashSet<ProductOption>();
+            this.ShoppingCartItems = new HashSet<ShoppingCartItem>();
         }
 
         public int Id { get; set; }
@@ -27,5 +28,7 @@
         public ICollection<Picture> Pictures { get; set; }
 
         public ICollection<ProductOption> ProductOptions { get; set; }
+
+        public ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

@@ -9,7 +9,7 @@
                 @foreach(var category in categories)
                 {
                     <li class="nav-item">
-                        <a class="nav-link ps-0" href="/category/@category.CategoryId"> @category.Name </a>
+                        <NavLink class="nav-link ps-0" @onclick="@(() => HandleClick(category.CategoryId))" > @category.Name </NavLink>
                     </li>
                 }
             </ul>
@@ -28,5 +28,11 @@
         {
             categories = result.Data;
         }
+    }
+
+    private void HandleClick(int categoryId)
+    {
+        NavigationManager.NavigateTo("category/" + categoryId);
+        //StateHasChanged();
     }
 }

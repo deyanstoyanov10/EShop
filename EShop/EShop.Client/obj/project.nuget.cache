@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ywor6oIOSmipTTkTAgbui4KhJQ0HvbHLWRdZTlA4IvhtIe6F5U0w4X1cPUyWyTDjnf+FncXkL8eZQy2OY0T1+Q==",
+  "dgSpecHash": "KXRPWV7/HgsuXCUjyqk+rYXPOVoGQoUwx578Of+DA3/4VwLRitjfQ+F98T/Obz2rzfZKByvPYfqZGvHH7m+ewg==",
   "success": true,
   "projectFilePath": "D:\\Visual Studio projects\\EShop\\EShop\\EShop.Client\\EShop.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\didko\\.nuget\\packages\\blazorcomponentbus\\2.0.0\\blazorcomponentbus.2.0.0.nupkg.sha512",
     "C:\\Users\\didko\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
+    "C:\\Users\\didko\\.nuget\\packages\\blazored.sessionstorage\\2.2.0\\blazored.sessionstorage.2.2.0.nupkg.sha512",
     "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.1\\microsoft.aspnetcore.authorization.6.0.1.nupkg.sha512",
     "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.1\\microsoft.aspnetcore.components.6.0.1.nupkg.sha512",
     "C:\\Users\\didko\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.1\\microsoft.aspnetcore.components.analyzers.6.0.1.nupkg.sha512",

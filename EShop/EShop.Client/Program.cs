@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 using Blazored.LocalStorage;
+using EShop.Client.Services.Hub;
+using EShop.Client.Services.Hub.Contracts;
+using BlazorComponentBus;
+using Blazored.SessionStorage;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -20,5 +24,7 @@ builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
+builder.Services.AddScoped<IHubService, HubService>();
+builder.Services.AddScoped<ComponentBus>();
+builder.Services.AddBlazoredSessionStorage();
 await builder.Build().RunAsync();

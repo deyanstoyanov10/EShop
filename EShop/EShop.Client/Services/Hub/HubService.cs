@@ -11,8 +11,8 @@
     {
         private HubConnection? _hubConnection;
 
-        private SearchModel searchModel;
-        private List<ProductOutputModel> productList;
+        private SearchModel searchModel = new SearchModel();
+        private List<ProductOutputModel> productList = new List<ProductOutputModel>();
 
         public HubService()
         {
@@ -31,6 +31,38 @@
             });
 
             _hubConnection.StartAsync().Wait();
+        }
+
+        public SearchModel SearchModel
+        {
+            get
+            {
+                return this.searchModel;
+            }
+        }
+
+        public List<ProductOutputModel> ProductList
+        {
+            get
+            {
+                return this.productList;
+            }
+        }
+
+        public async Task GetFilters(int categoryId)
+        {
+            if (_hubConnection is not null)
+            {
+                await _hubConnection.SendAsync("GetFilters", categoryId);
+            }
+        }
+
+        public async Task UpdateProducts(int categoryId)
+        {
+            if (_hubConnection is not null)
+            {
+                await _hubConnection.SendAsync("GetProducts", categoryId, this.searchModel);
+            }
         }
     }
 }

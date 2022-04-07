@@ -1,9 +1,13 @@
 ﻿@using Microsoft.AspNetCore.SignalR.Client
 
 <div id="aside_filter" class="collapse card d-lg-block mb-5">
-    @if (searchModel.Filters == null)
+    @if (!this.Loaded)
     {
         <Loader />
+    }
+    else if(searchModel.Filters == null || !searchModel.Filters.Any())
+    {
+        <p role="alert">No resource found!</p>
     }
     else
     {
@@ -44,39 +48,43 @@
     public int CategoryId { get; set; }
 
     private SearchModel searchModel = new SearchModel();
-    private HubConnection? hubConnection;
 
-    protected override async Task OnInitializedAsync()
+    bool Loaded = false;
+
+    protected override async Task OnParametersSetAsync()
     {
-        hubConnection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7030/productshub")
-            .Build();
+        Console.WriteLine("Filters CategoryID: " + this.CategoryId);
 
-        hubConnection.On<SocketResponse<SearchModel>>("TakeFilters", (response) =>
-        {
-            this.searchModel = response.Data;
-            StateHasChanged();
-        });
+        Bus.Subscribe<SocketResponse<SearchModel>>(ReceiveFilters);
 
-        await hubConnection.StartAsync();
-
-        await GetFilters();
-        //await UpdateProducts();
+        await Bus.Publish<GetFiltersByCategoryMessage>(new GetFiltersByCategoryMessage(this.CategoryId));
     }
 
-    private async Task GetFilters()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (hubConnection is not null)
+        if(!this.Loaded)
         {
-            await hubConnection.SendAsync("GetFilters", this.CategoryId);
+            Bus.Subscribe<SocketResponse<SearchModel>>(ReceiveFilters);
+
+            await Bus.Publish<GetFiltersByCategoryMessage>(new GetFiltersByCategoryMessage(this.CategoryId));
         }
+    }
+
+    private void ReceiveFilters(MessageArgs args)
+    {
+        var message = args.GetMessage<SocketResponse<SearchModel>>();
+
+        this.searchModel = message.Data;
+
+        this.Loaded = true;
+
+        StateHasChanged();
+
+        Bus.Publish<SearchModel>(this.searchModel);
     }
 
     private async Task UpdateProducts()
     {
-        if (hubConnection is not null)
-        {
-            await hubConnection.SendAsync("GetProducts", this.CategoryId, this.searchModel);
-        }
+        await Bus.Publish<SearchModel>(this.searchModel);
     }
 }

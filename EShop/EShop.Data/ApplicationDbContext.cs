@@ -23,6 +23,10 @@
 
         public DbSet<ProductOption> ProductOptions { get; set; }
 
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new CategoryConfiguration());
@@ -31,6 +35,8 @@
             builder.ApplyConfiguration(new PictureConfiguration());
             builder.ApplyConfiguration(new OptionConfiguration());
             builder.ApplyConfiguration(new ProductOptionConfiguration());
+            builder.ApplyConfiguration(new ShoppingCartConfiguration());
+            builder.ApplyConfiguration(new ShoppingCartItemConfiguration());
 
             base.OnModelCreating(builder);
         }

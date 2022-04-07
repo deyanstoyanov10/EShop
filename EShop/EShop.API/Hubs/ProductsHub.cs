@@ -36,17 +36,17 @@
 
             if (result.Failure)
             {
-                await Clients.Caller.SendAsync("TakeFilters", result.ToErrorSocketResponse());
+                await Clients.Caller.SendAsync("ReceiveFilters", result.ToErrorSocketResponse());
             }
             else
             {
-                await Clients.Caller.SendAsync("TakeFilters", result.ToSocketResponse());
+                await Clients.Caller.SendAsync("ReceiveFilters", result.ToSocketResponse());
             }
         }
 
-        public async Task GetProducts(int categoryId, SearchModel searchModel)
+        public async Task GetProducts(SearchModel searchModel)
         {
-            var result = await _productService.GetProducts(categoryId, searchModel);
+            var result = await _productService.GetProducts(searchModel);
 
             if (result.Failure)
             {

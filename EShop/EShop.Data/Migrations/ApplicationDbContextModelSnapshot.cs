@@ -231,6 +231,44 @@ namespace EShop.Data.Migrations
                     b.ToTable("ProductOptions");
                 });
 
+            modelBuilder.Entity("EShop.Common.Entities.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
+
+                    b.ToTable("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("EShop.Common.Entities.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("ShoppingCartId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<long>("Quantity")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("ShoppingCartId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ShoppingCartItems");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -427,6 +465,36 @@ namespace EShop.Data.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("EShop.Common.Entities.ShoppingCart", b =>
+                {
+                    b.HasOne("EShop.Common.Entities.AppUser", "AppUser")
+                        .WithOne("ShoppingCart")
+                        .HasForeignKey("EShop.Common.Entities.ShoppingCart", "AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("EShop.Common.Entities.ShoppingCartItem", b =>
+                {
+                    b.HasOne("EShop.Common.Entities.Product", "Product")
+                        .WithMany("ShoppingCartItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EShop.Common.Entities.ShoppingCart", "ShoppingCart")
+                        .WithMany("ShoppingCartItems")
+                        .HasForeignKey("ShoppingCartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("ShoppingCart");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -478,6 +546,12 @@ namespace EShop.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EShop.Common.Entities.AppUser", b =>
+                {
+                    b.Navigation("ShoppingCart")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("EShop.Common.Entities.Category", b =>
                 {
                     b.Navigation("Filters");
@@ -500,6 +574,13 @@ namespace EShop.Data.Migrations
                     b.Navigation("Pictures");
 
                     b.Navigation("ProductOptions");
+
+                    b.Navigation("ShoppingCartItems");
+                });
+
+            modelBuilder.Entity("EShop.Common.Entities.ShoppingCart", b =>
+                {
+                    b.Navigation("ShoppingCartItems");
                 });
 #pragma warning restore 612, 618
         }

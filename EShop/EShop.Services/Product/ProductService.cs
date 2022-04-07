@@ -16,9 +16,24 @@
 
     public class ProductService : IProductService
     {
+        private readonly string CANNOT_FIND_PRODUCT_MESSAGE = "Cannot find product";
         private readonly ApplicationDbContext _data;
 
         public ProductService(ApplicationDbContext data) => _data = data;
+
+        public async Task<Result<Product>> GetProductById(int productId)
+        {
+            var product = await _data
+                                    .Products
+                                    .FirstOrDefaultAsync(p => p.Id == productId);
+
+            if (product is null)
+            {
+                return CANNOT_FIND_PRODUCT_MESSAGE;
+            }
+
+            return product;
+        }
 
         public async Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(SearchModel search)
         {

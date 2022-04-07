@@ -20,6 +20,9 @@
     using Services.Providers;
     using Services.Providers.Contracts;
 
+    using EShop.Services.ShoppingCart;
+    using EShop.Services.ShoppingCart.Contracts;
+
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.IdentityModel.Tokens;
@@ -28,7 +31,7 @@
     using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     using System.Text;
-    
+
     public static class ServiceCollectionExtensions
     {
         public static AppSettings GetApplicationSettings(
@@ -95,7 +98,8 @@
                     .AddTransient<IAuthService, AuthService>()
                     .AddTransient<IProductService, ProductService>()
                     .AddTransient<ICategoryService, CategoryService>()
-                    .AddTransient<IFilterService, FilterService>();
+                    .AddTransient<IFilterService, FilterService>()
+                    .AddTransient<ICartService, CartService>();
 
         public static IServiceCollection AddApplicationProviders(this IServiceCollection services)
             => services

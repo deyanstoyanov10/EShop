@@ -3,6 +3,7 @@
     using EShop.Common.Entities;
     using EShop.Services.Authentication;
     using EShop.Services.Providers.Contracts;
+    using EShop.Services.ShoppingCart.Contracts;
 
     using Microsoft.AspNetCore.Identity;
     using System.Threading.Tasks;
@@ -18,6 +19,7 @@
         private readonly MockedLoginUserManager _loginUserManager;
         private readonly MockedRegistrationUserManager _registrationUserManager;
         private readonly IJwtTokenProvider _jwtTokenProvider;
+        private readonly ICartService _cartService;
 
         public AuthServiceTests()
         {
@@ -25,13 +27,14 @@
             _loginUserManager = new MockedLoginUserManager(store.Object, null, null, null, null, null, null, null, null);
             _registrationUserManager = new MockedRegistrationUserManager(store.Object, null, null, null, null, null, null, null, null);
             _jwtTokenProvider = GetMockedJwtTokenProvider();
+            _cartService = new Mock<ICartService>().Object;
         }
 
         [Fact]
         public async Task Registration_ReturnsSuccess_WithValidCredentialsInput()
         {
             var input = new RegisterUserInputModel("First", "Last", MockedRegistrationUserManager.ValidRegistrationUsername, MockedRegistrationUserManager.ValidRegistrationEmail, MockedRegistrationUserManager.ValidRegistrationPassword);
-            var authService = new AuthService(_registrationUserManager, _jwtTokenProvider);
+            var authService = new AuthService(_registrationUserManager, _jwtTokenProvider, _cartService);
 
             var result = await authService.Register(input);
 
@@ -51,7 +54,7 @@
         public async Task Registration_ReturnsError_WithNotValidCredentials(string username, string email, string password)
         {
             var input = new RegisterUserInputModel("First", "Last", username, email, password);
-            var authService = new AuthService(_registrationUserManager, _jwtTokenProvider);
+            var authService = new AuthService(_registrationUserManager, _jwtTokenProvider, _cartService);
 
             var result = await authService.Register(input);
 
@@ -62,7 +65,7 @@
         public async Task Login_ReturnsSuccess_WithValidCredentialsInput()
         {
             var input = new LoginUserInputModel(MockedLoginUserManager.ValidLoginUsername, MockedLoginUserManager.ValidLoginPassword);
-            var authService = new AuthService(_loginUserManager, _jwtTokenProvider);
+            var authService = new AuthService(_loginUserManager, _jwtTokenProvider, _cartService);
 
             var result = await authService.Login(input);
 
@@ -79,7 +82,7 @@
         public async Task Login_ReturnsError_WithNotValidCredentials(string username, string password)
         {
             var input = new LoginUserInputModel(username, password);
-            var authService = new AuthService(_loginUserManager, _jwtTokenProvider);
+            var authService = new AuthService(_loginUserManager, _jwtTokenProvider, _cartService);
 
             var result = await authService.Login(input);
 

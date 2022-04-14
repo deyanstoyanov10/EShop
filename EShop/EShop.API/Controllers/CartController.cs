@@ -18,12 +18,12 @@
     public class CartController : ApiController
     {
         private readonly ICartService _cartService;
-        private readonly IHubContext<ProductsHub> _hub;
+        private readonly IHubContext<SocketHub> _hub;
         private readonly UserManager<AppUser> _userManager;
 
         public CartController(
             ICartService cartService,
-            IHubContext<ProductsHub> hub,
+            IHubContext<SocketHub> hub,
             UserManager<AppUser> userManager)
         {
             _cartService = cartService;

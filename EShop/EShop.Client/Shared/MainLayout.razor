@@ -14,7 +14,7 @@
     protected override async Task OnInitializedAsync()
     {
         hubConnection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7030/productshub")
+            .WithUrl("https://localhost:7030/Websocket")
             .Build();
 
         hubConnection.On<SocketResponse<SearchModel>>("ReceiveFilters", (response) =>

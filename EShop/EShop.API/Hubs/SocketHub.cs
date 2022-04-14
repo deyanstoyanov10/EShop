@@ -9,18 +9,15 @@
 
     using static EShop.Common.Models.Search.SearchRecords;
 
-    public class ProductsHub : Hub
+    public class SocketHub : Hub
     {
-        private readonly IMemoryCache _cache;
         private readonly IFilterService _filterService;
         private readonly IProductService _productService;
 
-        public ProductsHub(
-            IMemoryCache cache,
+        public SocketHub(
             IFilterService filterService,
             IProductService productService)
         {
-            _cache = cache;
             _filterService = filterService;
             _productService = productService;
         }

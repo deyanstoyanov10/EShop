@@ -9,7 +9,6 @@ builder
     .Services
     .AddSignalR()
     .Services
-    .AddMemoryCache()
     .AddDatabase(builder.Configuration)
     .AddIdentity()
     .AddJwtAuthentication(settings)
@@ -35,6 +34,6 @@ app
 
 app.MapControllers();
 
-app.MapHub<ProductsHub>("/productshub");
+app.MapHub<SocketHub>("/Websocket");
 
 app.Run();

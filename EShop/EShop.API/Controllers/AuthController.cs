@@ -25,7 +25,7 @@
                 return new ApiResponse<AppUserOutputModel>(result.Errors);
             }
 
-            return await Login(new LoginUserInputModel(registerInput.Username, registerInput.Username));
+            return await Login(new LoginUserInputModel(registerInput.Username, registerInput.Password));
         }
 
         [HttpPost]

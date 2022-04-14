@@ -22,11 +22,6 @@
             _productService = productService;
         }
 
-        public override Task OnConnectedAsync()
-        {
-            return base.OnConnectedAsync();
-        }
-
         public async Task GetFilters(int categoryId)
         {
             var result = await _filterService.GetSearchModel(categoryId);

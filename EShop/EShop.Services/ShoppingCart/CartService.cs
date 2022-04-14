@@ -23,7 +23,7 @@
             _productService = productService;
         }
 
-        public async Task<ShoppingCart> GetShoppingCartByUserId(string userId)
+        public async Task<ShoppingCart> GetShoppingCart(string userId)
         {
             var shoppingCart = await _data
                                         .ShoppingCarts
@@ -31,6 +31,7 @@
 
             return shoppingCart;
         }
+
         public async Task<Result<ShoppingCartModel>> GetShoppingCart(AppUser user)
         {
             var items = await this.GetShoppingCartItems(user.ShoppingCart.Id);
@@ -40,7 +41,6 @@
                                         .Where(x => x.AppUserId == user.Id)
                                         .Select(x => new ShoppingCartModel()
                                         {
-                                            ShoppingCartId = x.Id,
                                             ShoppingCartItems = items.ToList()
                                         })
                                         .FirstOrDefaultAsync();

@@ -13,7 +13,7 @@
             ILocalStorageService localStorage) 
             : base(httpClient, localStorage) {}
 
-        public async Task<ApiResponse<bool>> AddProductsToShoppingCart(ShoppingCartItemRequest request)
-            => await this.PostJson<ShoppingCartItemRequest, bool>("api/Cart/AddProduct", request);
+        public async Task<ApiResponse<ShoppingCartModel>> UpdateCartItems(ShoppingCartItemRequest request)
+            => await this.PostJson<ShoppingCartItemRequest, ShoppingCartModel>("api/Cart/UpdateCartItems", request);
     }
 }

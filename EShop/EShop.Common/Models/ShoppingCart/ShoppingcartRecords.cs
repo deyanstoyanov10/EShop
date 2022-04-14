@@ -33,8 +33,6 @@
         {
             private double sum;
 
-            public int ShoppingCartId { get; set; }
-
             public List<ShoppingCartItemModel> ShoppingCartItems { get; set; }
 
             public double Sum

@@ -6,6 +6,6 @@
 
     internal interface ICartService
     {
-        Task<ApiResponse<bool>> AddProductsToShoppingCart(ShoppingCartItemRequest request);
+        Task<ApiResponse<ShoppingCartModel>> UpdateCartItems(ShoppingCartItemRequest request);
     }
 }

@@ -45,12 +45,12 @@
 
     protected override void OnInitialized()
     {
-        Bus.Subscribe<SocketResponse<ShoppingCartModel>>(UpdateCartItems);
+        Bus.Subscribe<ApiResponse<ShoppingCartModel>>(UpdateCartItems);
     }
 
     private void UpdateCartItems(MessageArgs args)
     {
-        var message = args.GetMessage<SocketResponse<ShoppingCartModel>>();
+        var message = args.GetMessage<ApiResponse<ShoppingCartModel>>();
 
         if (message.Succeeded)
         {

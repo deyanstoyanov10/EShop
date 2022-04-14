@@ -7,7 +7,7 @@
 
     public interface ICartService
     {
-        Task<ShoppingCart> GetShoppingCartByUserId(string userId);
+        Task<ShoppingCart> GetShoppingCart(string userId);
 
         Task<Result<ShoppingCartModel>> GetShoppingCart(AppUser user);
 

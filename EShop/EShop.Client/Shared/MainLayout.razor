@@ -27,16 +27,11 @@
             Bus.Publish<SocketResponse<IEnumerable<ProductOutputModel>>>(response);
         });
 
-        hubConnection.On<SocketResponse<ShoppingCartModel>>("UpdateCartItems", (response) =>
-        {
-            Bus.Publish<SocketResponse<ShoppingCartModel>>(response);
-        });
-
         await hubConnection.StartAsync();
 
         Bus.Subscribe<GetFiltersByCategoryMessage>(GetFilters);
         Bus.Subscribe<SearchModel>(UpdateProducts);
-        Bus.Subscribe<ProductMessage>(AddProductToShoppingCart);
+        Bus.Subscribe<ProductMessage>(UpdateCartItems);
     }
 
     private void GetFilters(MessageArgs args)
@@ -75,7 +70,7 @@
         }
     }
 
-    private void AddProductToShoppingCart(MessageArgs args)
+    private void UpdateCartItems(MessageArgs args)
     {
         var message = args.GetMessage<ProductMessage>();
 
@@ -83,7 +78,7 @@
 
         if (hubConnection is not null)
         {
-            var task = CartService.AddProductsToShoppingCart(new Common.Models.ShoppingCart.ShoppingcartRecords.ShoppingCartItemRequest
+            var task = CartService.UpdateCartItems(new Common.Models.ShoppingCart.ShoppingcartRecords.ShoppingCartItemRequest
                 {
                     ConnectionId = this.hubConnection.ConnectionId,
                     ProductId = productId
@@ -91,14 +86,7 @@
 
             var response = task.GetAwaiter().GetResult();
 
-            if(response.Failure)
-            {
-                // Send toastr message
-            }
-            else
-            {
-                // Send toastr message
-            }
+            Bus.Publish<ApiResponse<ShoppingCartModel>>(response);
         }
     }
 }

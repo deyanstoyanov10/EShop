@@ -14,5 +14,7 @@
         Task CreateShoppingCart(AppUser user);
 
         Task<Result<bool>> AddProductToCart(ShoppingCart cart, int productId);
+
+        Task RemoveCartItem(ShoppingCart cart, int productId);
     }
 }

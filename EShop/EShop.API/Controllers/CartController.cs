@@ -29,15 +29,36 @@
 
         [HttpPost]
         [Route(nameof(UpdateCartItems))]
-        public async Task<ApiResponse<ShoppingCartModel>> UpdateCartItems([FromBody] ShoppingCartItemRequest request)
+        public async Task<ApiResponse<ShoppingCartModel>> UpdateCartItems([FromBody] int productId)
         {
             var userId = HttpContext.User?.FindFirstValue(ClaimTypes.NameIdentifier);
-            var user = await _userManager.FindByIdAsync(userId);
 
             var userCart = await _cartService.GetShoppingCart(userId);
 
-            await _cartService.AddProductToCart(userCart, request.ProductId);
+            await _cartService.AddProductToCart(userCart, productId);
 
+            var user = await _userManager.FindByIdAsync(userId);
+
+            return await GetUserShoppingCart(user);
+        }
+
+        [HttpPost]
+        [Route(nameof(RemoveCartItem))]
+        public async Task<ApiResponse<ShoppingCartModel>> RemoveCartItem([FromBody] int productId)
+        {
+            var userId = HttpContext.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var userCart = await _cartService.GetShoppingCart(userId);
+
+            await _cartService.RemoveCartItem(userCart, productId);
+
+            var user = await _userManager.FindByIdAsync(userId);
+
+            return await GetUserShoppingCart(user);
+        }
+
+        private async Task<ApiResponse<ShoppingCartModel>> GetUserShoppingCart(AppUser user)
+        {
             var shoppingCartResult = await _cartService.GetShoppingCart(user);
 
             if (shoppingCartResult.Failure)

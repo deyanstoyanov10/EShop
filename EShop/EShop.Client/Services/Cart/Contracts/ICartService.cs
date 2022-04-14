@@ -6,6 +6,8 @@
 
     internal interface ICartService
     {
-        Task<ApiResponse<ShoppingCartModel>> UpdateCartItems(ShoppingCartItemRequest request);
+        Task<ApiResponse<ShoppingCartModel>> UpdateCartItems(int productId);
+
+        Task<ApiResponse<ShoppingCartModel>> RemoveCartItem(int productId);
     }
 }

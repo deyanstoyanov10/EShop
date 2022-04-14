@@ -97,6 +97,21 @@
             }
         }
 
+        public async Task RemoveCartItem(ShoppingCart cart, int productId)
+        {
+            var shoppingCartItem = await _data
+                                            .ShoppingCartItems
+                                            .Where(x => x.ShoppingCartId == cart.Id && x.ProductId == productId)
+                                            .FirstOrDefaultAsync();
+
+            if (shoppingCartItem is not null)
+            {
+                _data.ShoppingCartItems.Remove(shoppingCartItem);
+
+                await _data.SaveChangesAsync();
+            }
+        }
+
         private async Task<IEnumerable<ShoppingCartItemModel>> GetShoppingCartItems(int shoppingCartId)
             => await _data
                         .ShoppingCartItems
@@ -109,7 +124,10 @@
                             ProductName = x.Product.Label,
                             Price = x.Product.Price,
                             Quantity = x.Quantity,
-                            ThumbnailPath = x.Product.Pictures.FirstOrDefault().FilePath ?? "https://user-images.githubusercontent.com/101482/29592647-40da86ca-875a-11e7-8bc3-941700b0a323.png"
+                            ThumbnailPath = x.Product
+                                                    .Pictures
+                                                    .OrderBy(x => x.Position)
+                                                    .FirstOrDefault().FilePath ?? "https://user-images.githubusercontent.com/101482/29592647-40da86ca-875a-11e7-8bc3-941700b0a323.png"
                         })
                         .ToListAsync();
     }                   

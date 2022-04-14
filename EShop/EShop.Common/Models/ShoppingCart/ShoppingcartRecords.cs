@@ -50,8 +50,6 @@
 
         public class ShoppingCartItemRequest
         {
-            public string ConnectionId { get; set; }
-
             public int ProductId { get; set; }
         }
     }

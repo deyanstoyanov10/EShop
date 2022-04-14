@@ -31,7 +31,6 @@
 
         Bus.Subscribe<GetFiltersByCategoryMessage>(GetFilters);
         Bus.Subscribe<SearchModel>(UpdateProducts);
-        Bus.Subscribe<ProductMessage>(UpdateCartItems);
     }
 
     private void GetFilters(MessageArgs args)
@@ -44,7 +43,10 @@
         {
             try
             {
-                Task.WaitAll(hubConnection.SendAsync("GetFilters", categoryId));
+                Task.Factory.StartNew(async () =>
+                {
+                    await hubConnection.SendAsync("GetFilters", categoryId);
+                });
             }
             catch(Exception e)
             {
@@ -61,32 +63,15 @@
         {
             try
             {
-                Task.WaitAll(hubConnection.SendAsync("GetProducts", message));
+                Task.Factory.StartNew(async () =>
+                {
+                    await hubConnection.SendAsync("GetProducts", message);
+                });
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-        }
-    }
-
-    private void UpdateCartItems(MessageArgs args)
-    {
-        var message = args.GetMessage<ProductMessage>();
-
-        int productId = message.ProductId;
-
-        if (hubConnection is not null)
-        {
-            var task = CartService.UpdateCartItems(new Common.Models.ShoppingCart.ShoppingcartRecords.ShoppingCartItemRequest
-                {
-                    ConnectionId = this.hubConnection.ConnectionId,
-                    ProductId = productId
-                });
-
-            var response = task.GetAwaiter().GetResult();
-
-            Bus.Publish<ApiResponse<ShoppingCartModel>>(response);
         }
     }
 }

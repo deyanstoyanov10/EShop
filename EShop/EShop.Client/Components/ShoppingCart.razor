@@ -2,7 +2,7 @@
     @if (this.shoppingCart != null)
     {
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Your cart @shoppingCart.ShoppingCartItems.Count </h5>
+            <h5 class="offcanvas-title">Your cart (@shoppingCart.ShoppingCartItems.Count) </h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -14,17 +14,17 @@
                         <img src="@item.ThumbnailPath" class="border img-sm rounded">
                     </div>
                     <figcaption class="info">
-                        <a href="#" class="btn btn-icon btn-light float-end"><i class="fa fa-trash"></i></a>
-                        <p> @item.ProductName</p>
-                        <span class="text-muted">@item.Quantity x @item.Price </span> <br>
-                        <strong class="price"> @item.Amount </strong>
+                        <button class="btn btn-icon btn-light float-end" @onclick=@(async () => await RemoveCartItem(item.ProductId))><i class="fa fa-trash"></i></button>
+                        <p> @item.ProductName </p>
+                        <span class="text-muted">@item.Quantity x @FormatPrice(item.Price) </span> <br>
+                        <strong class="price"> @FormatPrice(item.Amount) </strong>
                     </figcaption>
                 </figure>
             }
 
             <hr>
 
-            <p class="mb-3 text-center"> Subtotal:  <strong class="text-danger"> @shoppingCart.Sum </strong></p>
+            <p class="mb-3 text-center"> Subtotal:  <strong class="text-danger"> @FormatPrice(shoppingCart.Sum) </strong></p>
             <div class="mb-3">
                 <a href="#" class="btn w-100 btn-success"> Checkout </a>
             </div>
@@ -45,17 +45,40 @@
 
     protected override void OnInitialized()
     {
-        Bus.Subscribe<ApiResponse<ShoppingCartModel>>(UpdateCartItems);
+        Bus.Subscribe<ProductMessage>(UpdateCartItems);
     }
 
     private void UpdateCartItems(MessageArgs args)
     {
-        var message = args.GetMessage<ApiResponse<ShoppingCartModel>>();
+        var message = args.GetMessage<ProductMessage>();
 
-        if (message.Succeeded)
+        var productId = message.ProductId;
+
+        Task.Factory.StartNew(async () =>
         {
-            shoppingCart = message.Data;
+            var response = await CartService.UpdateCartItems(productId);
+
+            if (response.Succeeded)
+            {
+                shoppingCart = response.Data;
+                StateHasChanged();
+            }
+        });
+    }
+
+    private async Task RemoveCartItem(int productId)
+    {
+        var response = await CartService.RemoveCartItem(productId);
+
+        if(response.Succeeded)
+        {
+            shoppingCart = response.Data;
             StateHasChanged();
         }
+    }
+
+    private string FormatPrice(double amount)
+    {
+        return string.Format("{0:C}", amount);
     }
 }

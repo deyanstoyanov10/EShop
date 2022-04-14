@@ -47,6 +47,18 @@
             return result;
         }
 
+        public async Task<bool> IsAuthenticated()
+        {
+            var authState = await ((AuthStateProvider)_authenticationStateProvider).GetAuthenticationStateAsync();
+
+            if (authState.User.Identity == null)
+            {
+                return false;
+            }
+
+            return authState.User.Identity.IsAuthenticated;
+        }
+
         public async Task Logout()
         {
             await this.RemoveJwtToken();

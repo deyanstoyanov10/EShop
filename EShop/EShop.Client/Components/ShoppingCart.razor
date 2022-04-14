@@ -48,6 +48,22 @@
         Bus.Subscribe<ProductMessage>(UpdateCartItems);
     }
 
+    protected override async Task OnInitializedAsync()
+    {
+        bool userIsAuthenticated = await AuthService.IsAuthenticated();
+
+        if(userIsAuthenticated)
+        {
+            var response = await CartService.GetShoppingCart();
+
+            if (response.Succeeded)
+            {
+                shoppingCart = response.Data;
+                StateHasChanged();
+            }
+        }
+    }
+
     private void UpdateCartItems(MessageArgs args)
     {
         var message = args.GetMessage<ProductMessage>();

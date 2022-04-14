@@ -34,7 +34,9 @@
 
         public async Task<Result<ShoppingCartModel>> GetShoppingCart(AppUser user)
         {
-            var items = await this.GetShoppingCartItems(user.ShoppingCart.Id);
+            var userCart = await this.GetShoppingCart(user.Id);
+
+            var items = await this.GetShoppingCartItems(userCart.Id);
 
             var shoppingCart = await _data
                                         .ShoppingCarts

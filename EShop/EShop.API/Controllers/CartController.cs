@@ -27,6 +27,16 @@
             _userManager = userManager;
         }
 
+        [HttpGet]
+        [Route(nameof(GetShoppingCart))]
+        public async Task<ApiResponse<ShoppingCartModel>> GetShoppingCart()
+        {
+            var userId = HttpContext.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _userManager.FindByIdAsync(userId);
+
+            return await GetUserShoppingCart(user);
+        }
+
         [HttpPost]
         [Route(nameof(UpdateCartItems))]
         public async Task<ApiResponse<ShoppingCartModel>> UpdateCartItems([FromBody] int productId)

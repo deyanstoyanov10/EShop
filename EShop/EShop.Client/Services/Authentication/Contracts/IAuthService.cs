@@ -10,6 +10,8 @@
 
         Task<ApiResponse<AppUserOutputModel>> Register(RegisterUserInputModel registerModel);
 
+        Task<bool> IsAuthenticated();
+
         Task Logout();
     }
 }

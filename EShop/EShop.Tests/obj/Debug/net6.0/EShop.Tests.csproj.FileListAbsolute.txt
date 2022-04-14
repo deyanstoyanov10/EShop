@@ -293,3 +293,4 @@ D:\Visual Studio projects\EShop\EShop\EShop.Tests\bin\Debug\net6.0\EShop.Validat
 D:\Visual Studio projects\EShop\EShop\EShop.Tests\bin\Debug\net6.0\Castle.Core.dll
 D:\Visual Studio projects\EShop\EShop\EShop.Tests\bin\Debug\net6.0\Moq.dll
 D:\Visual Studio projects\EShop\EShop\EShop.Tests\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Visual Studio projects\EShop\EShop\EShop.Tests\bin\Debug\net6.0\Categories.json

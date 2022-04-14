@@ -14,11 +14,12 @@
 @using static EShop.Common.Models.Category.CategoryRecords;
 @using static EShop.Common.Models.Search.SearchRecords;
 @using static EShop.Common.Models.Product.ProductRecords;
+@using static EShop.Common.Models.ShoppingCart.ShoppingcartRecords;
 @using static EShop.Common.Authentication.AuthenticationRecords
 @using EShop.Common.SocketResponse;
 @using Client.Services.Authentication.Contracts
 @using Client.Services.Category.Contracts
-@using Client.Services.Hub.Contracts
+@using Client.Services.Cart.Contracts
 @using Common;
 @using BlazorComponentBus;
 
@@ -26,4 +27,5 @@
 @inject NavigationManager NavigationManager
 @inject IAuthService AuthService
 @inject ICategoryService CategoryService
+@inject ICartService CartService
 @inject ComponentBus Bus

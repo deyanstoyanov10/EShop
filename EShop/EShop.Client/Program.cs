@@ -3,13 +3,14 @@ using EShop.Client.Services.Authentication;
 using EShop.Client.Services.Authentication.Contracts;
 using EShop.Client.Services.Category;
 using EShop.Client.Services.Category.Contracts;
+using EShop.Client.Services.Cart;
+using EShop.Client.Services.Cart.Contracts;
+
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 using Blazored.LocalStorage;
-using EShop.Client.Services.Hub;
-using EShop.Client.Services.Hub.Contracts;
 using BlazorComponentBus;
 using Blazored.SessionStorage;
 
@@ -24,7 +25,7 @@ builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IHubService, HubService>();
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<ComponentBus>();
 builder.Services.AddBlazoredSessionStorage();
 await builder.Build().RunAsync();

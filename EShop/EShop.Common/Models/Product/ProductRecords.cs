@@ -2,8 +2,6 @@
 {
     public class ProductRecords
     {
-        //public record ProductOutputModel(int productId, string label);
-
         public class ProductOutputModel
         {
             public int ProductId { get; set; }
@@ -21,6 +19,11 @@
             }
 
             public string? Picture { get; set; }
+        }
+
+        public class ProductMessage
+        {
+            public int ProductId { get; set; }
         }
     }
 }

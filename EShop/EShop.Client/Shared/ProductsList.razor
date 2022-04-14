@@ -24,7 +24,7 @@
                         </div>
                         <p class="title mb-2">@product.Label</p>
 
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button class="btn btn-primary" @onclick="@(async () => await AddProductToCart(product.ProductId))">Add to cart</button>
                         <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
                     </figcaption>
                 </figure>
@@ -61,5 +61,15 @@
         this.Loaded = true;
 
         StateHasChanged();
+    }
+
+    private async Task AddProductToCart(int productId)
+    {
+        var message = new ProductMessage()
+        {
+            ProductId = productId
+        };
+
+        await Bus.Publish<ProductMessage>(message);
     }
 }

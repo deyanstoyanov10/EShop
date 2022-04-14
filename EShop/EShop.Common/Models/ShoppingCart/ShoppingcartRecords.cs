@@ -4,6 +4,8 @@
     {
         public class ShoppingCartItemModel
         {
+            private double amount;
+
             public int ProductId { get; set; }
 
             public string ProductName { get; set; }
@@ -20,7 +22,7 @@
                 }
                 set
                 {
-                    this.Amount = value;
+                    this.amount = value;
                 }
             }
 
@@ -29,6 +31,8 @@
 
         public class ShoppingCartModel
         {
+            private double sum;
+
             public int ShoppingCartId { get; set; }
 
             public List<ShoppingCartItemModel> ShoppingCartItems { get; set; }
@@ -41,9 +45,16 @@
                 }
                 set
                 {
-                    this.Sum = value;
+                    this.sum = value;
                 }
             }
+        }
+
+        public class ShoppingCartItemRequest
+        {
+            public string ConnectionId { get; set; }
+
+            public int ProductId { get; set; }
         }
     }
 }

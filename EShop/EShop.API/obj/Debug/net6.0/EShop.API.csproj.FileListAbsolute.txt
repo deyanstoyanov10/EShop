@@ -77,3 +77,4 @@ D:\Visual Studio projects\EShop\EShop\EShop.API\obj\Debug\net6.0\EShop.API.pdb
 D:\Visual Studio projects\EShop\EShop\EShop.API\obj\Debug\net6.0\EShop.API.genruntimeconfig.cache
 D:\Visual Studio projects\EShop\EShop\EShop.API\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Visual Studio projects\EShop\EShop\EShop.API\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Visual Studio projects\EShop\EShop\EShop.API\bin\Debug\net6.0\Categories.json

@@ -1,8 +1,6 @@
 ﻿@page "/login"
 @inject NavigationManager NavigationManager
 
-<h3>Login</h3>
-
 @if (ShowErrors)
 {
     foreach (var error in Errors)
@@ -13,27 +11,31 @@
     }
 }
 
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Please enter your details</h5>
-        <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
-            <DataAnnotationsValidator />
-            <ValidationSummary />
+<section class="padding-y bg-light" style="min-height:90vh">
+    <div class="container">
+        <div class="card shadow mx-auto" style="max-width:400px; margin-top:40px;">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Sign in</h4>
+                <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
 
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <InputText Id="email" Class="form-control" @bind-Value="loginModel.Username" />
-                <ValidationMessage For="@(() => loginModel.Username)" />
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <InputText class="form-control" placeholder="Type username" @bind-Value="loginModel.Username" />
+                        <ValidationMessage For="@(() => loginModel.Username)" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <InputText class="form-control" placeholder="At least 6 characters." type="password" @bind-Value="loginModel.Password" />
+                        <ValidationMessage For="@(() => loginModel.Password)" />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </EditForm>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <InputText Id="password" type="password" Class="form-control" @bind-Value="loginModel.Password" />
-                <ValidationMessage For="@(() => loginModel.Password)" />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </EditForm>
+        </div>
     </div>
-</div>
+</section>
 
 @code {
     private LoginUserInputModel loginModel = new LoginUserInputModel();

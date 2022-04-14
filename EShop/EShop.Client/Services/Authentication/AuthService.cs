@@ -32,6 +32,21 @@
             return result;
         }
 
+        public async Task<ApiResponse<AppUserOutputModel>> Register(RegisterUserInputModel registerModel)
+        {
+            var result = await this.PostJson<RegisterUserInputModel, AppUserOutputModel>("api/Auth/Register", registerModel);
+
+            if (result.Failure)
+            {
+                return result;
+            }
+
+            await this.SetJwtToken(result.Data.token);
+            ((AuthStateProvider)_authenticationStateProvider).MarkUserAsAuthenticated(registerModel.Username);
+
+            return result;
+        }
+
         public async Task Logout()
         {
             await this.RemoveJwtToken();

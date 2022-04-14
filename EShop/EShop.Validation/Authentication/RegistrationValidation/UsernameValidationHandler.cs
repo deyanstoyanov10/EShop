@@ -17,7 +17,7 @@
 
         public override async Task<Result<AppUser>> Execute(RegisterUserInputModel model)
         {
-            var user = await _userManager.FindByNameAsync(model.username);
+            var user = await _userManager.FindByNameAsync(model.Username);
 
             return user is not null ? USERNAME_ALREADY_EXIST_MESSAGE : await _next.Execute(model);
         }

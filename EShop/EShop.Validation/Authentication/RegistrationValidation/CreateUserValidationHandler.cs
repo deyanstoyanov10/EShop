@@ -17,13 +17,13 @@
         {
             var appUser = new AppUser
             {
-                Email = model.email,
-                UserName = model.username,
-                FirstName = model.firstName,
-                LastName = model.lastName
+                Email = model.Email,
+                UserName = model.Username,
+                FirstName = model.FirstName,
+                LastName = model.LastName
             };
 
-            var identityResult = await _userManager.CreateAsync(appUser, model.password);
+            var identityResult = await _userManager.CreateAsync(appUser, model.Password);
 
             if (!identityResult.Succeeded)
             {

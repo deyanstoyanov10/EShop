@@ -33,7 +33,16 @@
         [Fact]
         public async Task Registration_ReturnsSuccess_WithValidCredentialsInput()
         {
-            var input = new RegisterUserInputModel("First", "Last", MockedRegistrationUserManager.ValidRegistrationUsername, MockedRegistrationUserManager.ValidRegistrationEmail, MockedRegistrationUserManager.ValidRegistrationPassword);
+            var input = new RegisterUserInputModel()
+            {
+                FirstName = "First",
+                LastName = "Last",
+                Username = MockedRegistrationUserManager.ValidRegistrationUsername,
+                Email = MockedRegistrationUserManager.ValidRegistrationEmail,
+                Password = MockedRegistrationUserManager.ValidRegistrationPassword,
+                ConfirmPassword = MockedRegistrationUserManager.ValidRegistrationPassword
+            };
+
             var authService = new AuthService(_registrationUserManager, _jwtTokenProvider, _cartService);
 
             var result = await authService.Register(input);
@@ -53,7 +62,15 @@
         [InlineData("Test", MockedRegistrationUserManager.ValidRegistrationEmail, MockedRegistrationUserManager.ValidRegistrationPassword)]
         public async Task Registration_ReturnsError_WithNotValidCredentials(string username, string email, string password)
         {
-            var input = new RegisterUserInputModel("First", "Last", username, email, password);
+            var input = new RegisterUserInputModel()
+            {
+                FirstName = "First",
+                LastName = "Last",
+                Username = username,
+                Email = email,
+                Password = password,
+                ConfirmPassword = password
+            };
             var authService = new AuthService(_registrationUserManager, _jwtTokenProvider, _cartService);
 
             var result = await authService.Register(input);

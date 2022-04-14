@@ -8,7 +8,15 @@
 
     public class AuthControllerRouteTests
     {
-        private readonly RegisterUserInputModel model = new RegisterUserInputModel("testFirstName", "testLastName", "testUsername", "testEmail", "testPassword");
+        private readonly RegisterUserInputModel model = new RegisterUserInputModel()
+        {
+            FirstName = "testFirstName",
+            LastName = "testLastName",
+            Username = "testEmail",
+            Email = "testEmail",
+            Password = "testPassword",
+            ConfirmPassword = "testPassword"
+        };
 
         //[Fact]
         //public void PostLoginShouldBeMappedCorrectly()

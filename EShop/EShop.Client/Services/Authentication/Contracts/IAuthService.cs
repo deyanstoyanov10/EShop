@@ -8,6 +8,8 @@
     {
         Task<ApiResponse<AppUserOutputModel>> Login(LoginUserInputModel loginModel);
 
+        Task<ApiResponse<AppUserOutputModel>> Register(RegisterUserInputModel registerModel);
+
         Task Logout();
     }
 }

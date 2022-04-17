@@ -5,7 +5,6 @@
     using Services.Product.Contracts;
 
     using Microsoft.AspNetCore.SignalR;
-    using Microsoft.Extensions.Caching.Memory;
 
     using static EShop.Common.Models.Search.SearchRecords;
 
@@ -33,6 +32,20 @@
             else
             {
                 await Clients.Caller.SendAsync("ReceiveFilters", result.ToSocketResponse());
+            }
+        }
+
+        public async Task GetTopProducts(int take = 10)
+        {
+            var result = await _productService.GetTopProducts(take);
+
+            if (result.Failure)
+            {
+                await Clients.Caller.SendAsync("ReceiveTopProducts", result.ToErrorSocketResponse());
+            }
+            else
+            {
+                await Clients.Caller.SendAsync("ReceiveTopProducts", result.ToSocketResponse());
             }
         }
 

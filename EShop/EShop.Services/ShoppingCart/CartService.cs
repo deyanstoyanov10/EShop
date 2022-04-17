@@ -47,6 +47,11 @@
                                         })
                                         .FirstOrDefaultAsync();
 
+            if (shoppingCart is null)
+            {
+                return "Cannot find shopping cart";
+            }
+
             return shoppingCart;
         }
 

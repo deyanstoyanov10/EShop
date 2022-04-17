@@ -27,10 +27,16 @@
             Bus.Publish<SocketResponse<IEnumerable<ProductOutputModel>>>(response);
         });
 
+        hubConnection.On<SocketResponse<IEnumerable<ProductOutputModel>>>("ReceiveTopProducts", (response) =>
+        {
+            Bus.Publish<SocketResponse<IEnumerable<ProductOutputModel>>>(response);
+        });
+
         await hubConnection.StartAsync();
 
         Bus.Subscribe<GetFiltersByCategoryMessage>(GetFilters);
         Bus.Subscribe<SearchModel>(UpdateProducts);
+        Bus.Subscribe<GetTopProducts>(GetTopProducts);
     }
 
     private void GetFilters(MessageArgs args)
@@ -66,6 +72,28 @@
                 Task.Factory.StartNew(async () =>
                 {
                     await hubConnection.SendAsync("GetProducts", message);
+                });
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+
+    private void GetTopProducts(MessageArgs args)
+    {
+        var message = args.GetMessage<GetTopProducts>();
+        Console.WriteLine("GetTopProducts");
+        int take = message.Take;
+
+        if (hubConnection is not null)
+        {
+            try
+            {
+                Task.Factory.StartNew(async () =>
+                {
+                    await hubConnection.SendAsync("GetTopProducts", take);
                 });
             }
             catch(Exception e)

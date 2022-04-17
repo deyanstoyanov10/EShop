@@ -60,16 +60,6 @@
         await Bus.Publish<GetFiltersByCategoryMessage>(new GetFiltersByCategoryMessage(this.CategoryId));
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if(!this.Loaded)
-        {
-            Bus.Subscribe<SocketResponse<SearchModel>>(ReceiveFilters);
-
-            await Bus.Publish<GetFiltersByCategoryMessage>(new GetFiltersByCategoryMessage(this.CategoryId));
-        }
-    }
-
     private void ReceiveFilters(MessageArgs args)
     {
         var message = args.GetMessage<SocketResponse<SearchModel>>();

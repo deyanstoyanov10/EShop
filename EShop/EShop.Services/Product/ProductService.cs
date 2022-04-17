@@ -35,6 +35,28 @@
             return product;
         }
 
+        public async Task<Result<IEnumerable<ProductOutputModel>>> GetTopProducts(int take = 10)
+        {
+            var products = await _data
+                                    .Products
+                                    .Include(pic => pic.Pictures)
+                                    .OrderByDescending(x => x.Added)
+                                    .Take(take)
+                                    .Select(p => new ProductOutputModel()
+                                    {
+                                        ProductId = p.Id,
+                                        Label = p.Label,
+                                        Price = p.Price,
+                                        Picture = p.Pictures
+                                                        .OrderBy(x => x.Position)
+                                                        .Select(x => x.FilePath)
+                                                        .FirstOrDefault()
+                                    })
+                                    .ToListAsync();
+
+            return products;
+        }
+
         public async Task<Result<IEnumerable<ProductOutputModel>>> GetProducts(SearchModel search)
         {
             var predicate = BuildPredicate(search);

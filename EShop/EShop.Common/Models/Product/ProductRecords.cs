@@ -2,6 +2,8 @@
 {
     public class ProductRecords
     {
+        public record GetTopProducts(int Take);
+
         public class ProductOutputModel
         {
             public int ProductId { get; set; }
